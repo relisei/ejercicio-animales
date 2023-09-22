@@ -20,3 +20,9 @@ const getEspecies = (animal) => {
 };
 
 getEspecies(animalA);
+
+const isExtinct = (animal) => {
+  return animal.hasOwnProperty("extinction");
+};
+
+console.log(isExtinct(animalA));
