@@ -21,8 +21,12 @@ const getEspecies = (animal) => {
 
 getEspecies(animalA);
 
-const isExtinct = (animal) => {
-  return animal.hasOwnProperty("extinction");
+const isExtinct = (animal) => Object.hasOwn(animal, "extinction");
+
+console.log(isExtinct(animalB));
+
+const printAnimal = (animal) => {
+  return `El animal ${animal.name} es un ${animal.species} de ${animal.age} años de edad y pesa ${animal.weight} kg`;
 };
 
-console.log(isExtinct(animalA));
+printAnimal(animalA);
